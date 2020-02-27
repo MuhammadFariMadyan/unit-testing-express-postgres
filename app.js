@@ -3,6 +3,11 @@ const app = expess();
 const userRouter = require("./routers/users");
 const swaggerUi = require('swagger-ui-express');
 const swaggerJSDoc = require('swagger-jsdoc');
+const cors = require('cors');
+
+app.use(cors());
+app.use(expess.json());
+app.use(expess.urlencoded({extended:false}));
 
 const swaggerDefinition = {
     info: {
@@ -28,16 +33,13 @@ app.get('/api-docs.json', (req, res) => {
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-app.use(expess.json());
-app.use(expess.urlencoded({extended:false}))
-
 app.get("/",(req, res)=>{
   res.send({message:"Welcome to Backend API"})
 })
 
 app.use("/api/v1/users", userRouter);
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.listen(port, ()=>console.log("server on port " + port));
 
 module.exports = app;
