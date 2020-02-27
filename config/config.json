@@ -1,0 +1,30 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "rahasia",
+    "database": "db_unit_testing_expressjs",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "rahasia",
+    "database": "db_unit_testing_expressjs_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test-github": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "postgres",
+    "host": "postgres",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "lzchenqbczuozb",
+    "password": "c7508b0402e065e40ab589a297ffa8ab6cbe1239c6fee1881a89489e2dd476ce",
+    "database": "dcdbgpe6t85p65",
+    "host": "ec2-35-168-54-239.compute-1.amazonaws.com",
+    "dialect": "postgres"    
+  }
+}

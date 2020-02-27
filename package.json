@@ -1,0 +1,40 @@
+{
+  "name": "unit-testing-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "cross-env NODE_ENV=test nyc ./node_modules/.bin/_mocha --exit",
+    "test:watch": "cross-env NODE_ENV=test nyc nodemon --exec ./node_modules/.bin/_mocha",
+    "test-github": "cross-env NODE_ENV=test-github nyc ./node_modules/.bin/_mocha --exit",
+    "db:test:start": "cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:create && cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:migrate",
+    "db:test:reset": "cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:drop && cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:create && cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:migrate",
+    "tb:test:reset": "cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:migrate:undo:all  && cross-env NODE_ENV=test ./node_modules/.bin/sequelize db:migrate",
+    "tb:test-github:start": "cross-env NODE_ENV=test-github ./node_modules/.bin/sequelize db:migrate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "only": "0.0.2",
+    "pg": "^7.18.2",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.5",
+    "sequelize-cli": "^5.5.1",
+    "swagger-jsdoc": "^3.5.0",
+    "swagger-ui-express": "^4.1.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "cross-env": "^7.0.0",
+    "mocha": "^7.1.0",
+    "nyc": "^15.0.0",
+    "supertest": "^4.0.2"
+  }
+}
