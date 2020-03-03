@@ -37,7 +37,7 @@ psql --version
 psql (PostgreSQL) 11.2
 ```
 
-## Getting Started to the development
+## Getting Started
 Clone the repository :
 ```
 git clone https://github.com/MuhammadFariMadyan/unit-testing-express-postgres.git
@@ -50,7 +50,7 @@ Install all the dependencies using `npm` or you can using `yarn` :
 ```
 npm install or yarn install
 ```
-Set configuration database like on your environtment system,to the config file on mode `development` in file `config/config.js` :
+For Development mode, you must set configuration the database like on your environtment system,to the config file on mode `development` in file `config/config.js` :
 ```
 "development": {
     "username": "DATABASE_USER_NAME",
@@ -60,23 +60,30 @@ Set configuration database like on your environtment system,to the config file o
     "dialect": "postgres"
   },
 ```
-
-Run the server :
+For testing mode, you must set configuration the database on mode `test` in file `config/config.js` :
 ```
-npm run start
+"test": {
+    "username": "postgres",
+    "password": "rahasia",
+    "database": "db_unit_testing_expressjs_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
 ```
-You can now access the server at http://localhost:3000
-
-Create Database and Migration :
+Create Database and Migration for development:
 ```
 npm run db:start
+```
+Create Database and Migration for testing:
+```
+npm run db:test:start
 ```
 Run The Test :
 
 ```
 npm run test
 ```
-You can see the result coverage testing :
+You can see the results of  testing coverage using istanbul:
 ```
 ----------------------------------|---------|----------|---------|---------|-------------------
 File                              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
@@ -96,3 +103,9 @@ All files                         |   91.53 |    76.19 |   88.89 |   91.96 |
 ----------------------------------|---------|----------|---------|---------|-------------------
 Done in 8.27s.
 ```
+
+Run the server :
+```
+npm run start
+```
+You can now access the server at http://localhost:3000 and you can also access the documentation of API at http://localhost:3000/api-docs/
