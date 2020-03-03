@@ -5,7 +5,7 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerJSDoc = require('swagger-jsdoc');
 const cors = require('cors');
 // const HOST_APP = 'localhost:3000';
-const HOST_APP = 'https://unit-test-express-postgres.herokuapp.com';
+const HOST_APP = 'unit-test-express-postgres.herokuapp.com';
 
 app.use(cors());
 app.use(expess.json());
