@@ -1,6 +1,29 @@
-# Demo Unit Testing Express.js PostgreSQL
+# Unit Testing Express.js with PostgreSQL | [Demo](https://unit-test-express-postgres.herokuapp.com/api-docs)
+### Description :
+- This repo is the result of source code at the live streaming event from this [event](https://www.twitch.tv/videos/558640300), and this is list of discussions of it:
+  1. Opening = in minutes (12:12:13)
+  2. Session 1 - Create Rest API with Express.js manually = in minutes (00:16:50 - 01:24:10)
+  3. Session 1 - Creating Documentation Rest API with Swagger = in minutes (01:24:50)
+  4. Session 1 - Rest = in minutes (01:53:00 - 02:15:27)
+  5. Session 1 - Continue to Make Rest API Documentation with Swagger = in minutes (02:15:30)
+  6. Session 1 - Completed = in minutes (02:36:27)
+  7. Session 2 - Intro Automated Testing = in minutes (02:45:32)
+  8. Session 2 - Start to make Unit Testing = in minutes (02:52:40 - 05:19:15)
+  9. Session 2 - Making configuration Github Actions for Continuous Integration = in minutes (05:20:00)
+  10. Session 2 - Deploy to Heroku and create CIs / CDs from Github Actions and activate Automatic Deploy on Heroku =
+  in minutes (05:41:55 - 06:51:20)
+  11. Session 2 - Conclusion and Closing = in minutes (06:51:30)
+- This repo is part from this event : 
+![image](https://dicodingacademy.blob.core.windows.net/eventimages/2020022507465221be19857ca150a93515c8d0782bd5f7.jpg)
+- Speaker : 
+  1. Session 1 by [Elfin Sanjaya](https://github.com/elfinsanjaya12)
+  2. Session 2 by [M. Fari Madyan](https://github.com/MuhammadFariMadyan)
+- Discussion all about that on [this](https://www.dicoding.com/events/2988/documentations)
 
-## Requirement
+### Screnshoot : 
+![image](https://user-images.githubusercontent.com/7545546/75762344-18603c80-5d6d-11ea-9f7e-f0942b85cec4.png) 
+
+## Local Requirements
 For running this project please install nodejs and postgresql.
 
 Node.js:
@@ -44,9 +67,12 @@ npm run start
 ```
 You can now access the server at http://localhost:3000
 
-## Run The Test
+Create Database and Migration :
+```
+npm run db:start
+```
+Run The Test :
 
-Run test
 ```
 npm run test
 ```
