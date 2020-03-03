@@ -50,7 +50,7 @@ Install all the dependencies using `npm` or you can using `yarn` :
 ```
 npm install or yarn install
 ```
-For Development mode, you must set configuration the database like on your environtment system,to the config file on mode `development` in file `config/config.js` :
+For `development` mode, you must set configuration the database like on your environtment system,to the config file on mode `development` in file `config/config.js` :
 ```
 "development": {
     "username": "DATABASE_USER_NAME",
@@ -60,7 +60,7 @@ For Development mode, you must set configuration the database like on your envir
     "dialect": "postgres"
   },
 ```
-For testing mode, you must set configuration the database on mode `test` in file `config/config.js` :
+For `testing` mode, you must set configuration the database on mode `test` in file `config/config.js` :
 ```
 "test": {
     "username": "postgres",
@@ -70,11 +70,11 @@ For testing mode, you must set configuration the database on mode `test` in file
     "dialect": "postgres"
   },
 ```
-Create Database and Migration for development:
+Create Database and Migration for `development`:
 ```
 npm run db:start
 ```
-Create Database and Migration for testing:
+Create Database and Migration for `testing`:
 ```
 npm run db:test:start
 ```
@@ -103,7 +103,20 @@ All files                         |   91.53 |    76.19 |   88.89 |   91.96 |
 ----------------------------------|---------|----------|---------|---------|-------------------
 Done in 8.27s.
 ```
-
+For `production`, you can uncomment line 8 and comment line 7 in file `app.js`and change HOST with YOUR_HOST_APP:
+```
+...
+7 // const HOST_APP = 'localhost:3000';
+8 const HOST_APP = YOUR_HOST_APP;
+...
+```
+For `development`, you can uncomment line 7 and comment line 8 in file `app.js`:
+```
+...
+7 const HOST_APP = 'localhost:3000';
+8 // const HOST_APP = YOUR_HOST_APP;
+...
+```
 Run the server :
 ```
 npm run start
