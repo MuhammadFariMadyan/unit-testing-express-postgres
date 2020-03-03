@@ -4,6 +4,8 @@ const userRouter = require("./routers/users");
 const swaggerUi = require('swagger-ui-express');
 const swaggerJSDoc = require('swagger-jsdoc');
 const cors = require('cors');
+// const HOST_APP = 'localhost:3000';
+const HOST_APP = 'https://unit-test-express-postgres.herokuapp.com';
 
 app.use(cors());
 app.use(expess.json());
@@ -14,7 +16,7 @@ const swaggerDefinition = {
       title: 'Unit Testing Expres JS', // Title (required)
       version: '1.0.0', // Version (required)
     },
-    host: "localhost:3000",
+    host: HOST_APP,
     basePath: "/"
 };
 
