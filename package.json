@@ -7,6 +7,7 @@
     "start": "node app.js",
     "dev": "nodemon app.js",
     "test": "cross-env NODE_ENV=test nyc ./node_modules/.bin/_mocha --exit",
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "test:watch": "cross-env NODE_ENV=test nyc nodemon --exec ./node_modules/.bin/_mocha",
     "test-github": "cross-env NODE_ENV=test-github nyc ./node_modules/.bin/_mocha --exit",
     "db:reset": "./node_modules/.bin/sequelize db:drop && ./node_modules/.bin/sequelize db:create && ./node_modules/.bin/sequelize db:migrate",
