@@ -26,19 +26,9 @@ jobs:
       - name: Setup node.js use ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
-      - name: Setup codecov
-        uses: codecov/codecov-action@v1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
-          #file: ./coverage.xml # optional
-          #flags: unittests # optional
-          #name: codecov-umbrella # optional
-          #fail_ci_if_error: true # optional (default = false)
+          node-version: ${{ matrix.node-version }}      
       - name: Install dependencies
-        run: npm install
-      - name: Install global codecov
-        run: npm install -g codecov
+        run: npm install      
       - name: Run migration on mode test-Github
         run: npm run tb:test-github:start
         env:
@@ -49,5 +39,13 @@ jobs:
         env:
           POSTGRES_HOST: postgres
           POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }}
-      - name: Sending report to codecov.io
+      - name: Create report
         run: npm run report-coverage
+      - name: Send report to codecov.io
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          file: ./coverage.lcov # optional
+          #flags: unittests # optional
+          #name: codecov-umbrella # optional
+          #fail_ci_if_error: true # optional (default = false)
