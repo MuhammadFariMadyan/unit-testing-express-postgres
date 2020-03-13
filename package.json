@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/pm2 start app.js",
-    "stop": "./node_modules/.bin/pm2 stop app.js",
-    "restart": "./node_modules/.bin/pm2 restart app.js",
+    "start": "pm2-runtime start ecosystem.config.js --env production",
+    "stop": "pm2-runtime stop ecosystem.config.js --env production",
+    "restart": "pm2-runtime restart ecosystem.config.js --env production",
     "status": "./node_modules/.bin/pm2 status",
     "monitor": "./node_modules/.bin/pm2 monit",
     "dev": "nodemon app.js",
