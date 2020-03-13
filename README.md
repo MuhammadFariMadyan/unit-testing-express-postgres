@@ -136,3 +136,5 @@ Lalu, anda dapat mengakses proyek ini di alamat : http://localhost:3000, untuk d
 ## Diperbarui
 Berisi daftar penambahan atau perubahan yang dilakukan diluar dari source code yang dibuat saat video live streaming :
 1. Penambahan codecov untuk melihat hasil coverage testingnya secara online.
+2. Memperbaiki typo penulisan "expess" di file app.js.
+3. Menambahkan pm2 untuk menjalankan server di Heroku beserta scripts command nya.
