@@ -1,8 +1,9 @@
-# Unit Testing Express.js with PostgreSQL | [Demo](https://unit-test-express-postgres.herokuapp.com/api-docs) &middot; ![Github CI Node.js PostgreSQL](https://github.com/MuhammadFariMadyan/unit-testing-express-postgres/workflows/Github%20CI%20Node.js%20PostgreSQL/badge.svg) [![codecov](https://codecov.io/gh/MuhammadFariMadyan/unit-testing-express-postgres/branch/development/graph/badge.svg)](https://codecov.io/gh/MuhammadFariMadyan/unit-testing-express-postgres)
+# Unit Testing Express.js with PostgreSQL | [Demo](https://unit-test-express-postgres.herokuapp.com/api-docs) &middot; ![Github CI Node.js PostgreSQL](https://github.com/MuhammadFariMadyan/unit-testing-express-postgres/workflows/Github%20CI%20Node.js%20PostgreSQL/badge.svg) [![codecov](https://codecov.io/gh/MuhammadFariMadyan/unit-testing-express-postgres/branch/master/graph/badge.svg)](https://codecov.io/gh/MuhammadFariMadyan/unit-testing-express-postgres)
 
 ## Tentang Proyek ini
 > *Repositori sederhana dari proyek ini adalah contoh penerapan unit testing untuk menggunakan continuous integration (CI) dari github action dan continuous deployment (CD) di heroku dengan menggunakan express.js sebagai framework dari node.js, mocha chai dan istanbul untuk testing dan coveragenya serta menggunakan postgresql sebagai databasenya. https://www.dicoding.com/events/2988*
 
+> [Read in English Version](README.en.md)
 
 ### Deskripsi :
 - Repositori ini adalah hasil akhir source code dari acara live streaming yang berjudul [Create REST API with Automated Testing using Express.js](https://www.dicoding.com/events/2988/).
