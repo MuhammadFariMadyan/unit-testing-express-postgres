@@ -1,5 +1,5 @@
-const expess = require("express");
-const app = expess();
+const express = require("express");
+const app = express();
 const userRouter = require("./routers/users");
 const swaggerUi = require('swagger-ui-express');
 const swaggerJSDoc = require('swagger-jsdoc');
@@ -8,8 +8,8 @@ const cors = require('cors');
 const HOST_APP = 'unit-test-express-postgres.herokuapp.com';
 
 app.use(cors());
-app.use(expess.json());
-app.use(expess.urlencoded({extended:false}));
+app.use(express.json());
+app.use(express.urlencoded({extended:false}));
 
 const swaggerDefinition = {
     info: {

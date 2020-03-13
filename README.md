@@ -3,6 +3,7 @@
 ## Tentang Proyek ini
 > *Repositori sederhana dari proyek ini adalah contoh penerapan unit testing untuk menggunakan continuous integration (CI) dari github action dan continuous deployment (CD) di heroku dengan menggunakan express.js sebagai framework dari node.js, mocha chai dan istanbul untuk testing dan coveragenya serta menggunakan postgresql sebagai databasenya. https://www.dicoding.com/events/2988*
 
+> [Read in English Version](README.en.md)
 
 ### Deskripsi :
 - Repositori ini adalah hasil akhir source code dari acara live streaming yang berjudul [Create REST API with Automated Testing using Express.js](https://www.dicoding.com/events/2988/).
