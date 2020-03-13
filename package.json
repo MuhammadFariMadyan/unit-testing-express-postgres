@@ -6,7 +6,7 @@
   "scripts": {
     "start": "pm2-runtime start ecosystem.config.js --env production",
     "stop": "pm2-runtime stop ecosystem.config.js --env production",
-    "restart": "pm2-runtime restart ecosystem.config.js --env production",    
+    "restart": "pm2-runtime restart ecosystem.config.js --env production",
     "status": "./node_modules/.bin/pm2 status",
     "monitor": "./node_modules/.bin/pm2 monit",
     "dev": "nodemon app.js",
