@@ -1,13 +1,13 @@
 # Unit Testing Express.js with PostgreSQL | [Demo](https://unit-test-express-postgres.herokuapp.com/api-docs) &middot; ![Github CI Node.js PostgreSQL](https://github.com/MuhammadFariMadyan/unit-testing-express-postgres/workflows/Github%20CI%20Node.js%20PostgreSQL/badge.svg) [![codecov](https://codecov.io/gh/MuhammadFariMadyan/unit-testing-express-postgres/branch/development/graph/badge.svg)](https://codecov.io/gh/MuhammadFariMadyan/unit-testing-express-postgres)
 
 ## Tentang Proyek ini
-> *Repositori sederhana dari proyek ini adalah contoh penerapan unit testing untuk menggunakan continuous integration (CI) dari github action dan continuous deployment (CD) di heroku dengan menggunakan express.js sebagai framework dari node.js, mocha chai dan istanbul untuk testing dan coveragenya serta menggunakan postgresql sebagai databasenya. https://www.dicoding.com/events/2988*
+> *Ini adalah repositori sederhana sebagai contoh dari penerapan unit testing menggunakan continuous integration (CI) menggunaakan github actions dan continuous deployment (CD) di heroku yang dibuat menggunakan express.js (salah satu framework dari node.js), mocha sebagai test runnner, chai sebagai assertion library dan istanbul untuk melihat coverage testingnya serta menggunakan postgresql sebagai databasenya. Event ini terdaftar di https://www.dicoding.com/events/2988*
 
 > [Read in English Version](README.en.md)
 
 ### Deskripsi :
-- Repositori ini adalah hasil akhir source code dari acara live streaming yang berjudul [Create REST API with Automated Testing using Express.js](https://www.dicoding.com/events/2988/).
-- Video live streaming dapat dilihat disini [twitch.com/faritw](https://www.twitch.tv/videos/558640300), daftar materi nya adalah sebagai berikut :
+- Repositori ini adalah hasil akhir dari source code yang dibuat pada acara live streaming yang berjudul [Create REST API with Automated Testing using Express.js](https://www.dicoding.com/events/2988/).
+- Video live streaming dapat dilihat di [twitch.com/faritw](https://www.twitch.tv/videos/558640300), untuk daftar materi nya adalah sebagai berikut :
   - Pembukaan = di menit (00:12:13)
   - Sesi 1 - Create Rest API with Express.js secara manual = di menit (00:16:50 - 01:24:10)
   - Sesi 1 - Membuat Dokumentasi Rest API dengan Swagger = di menit (01:24:50)
@@ -34,7 +34,7 @@ Dokumentasi REST API dari proyek ini : [unit-test-express-postgres.herokuapp.com
 - Baru 11 test case yang telah dibuat.
 
 ## Langkah - langkah memulai project ini di komputer anda
-Untuk menjalankan proyek ini, silahkan terlebih dahulu memasang nodejs dan postgresql.
+Untuk menjalankan proyek ini, anda harus sudah memasang nodejs dan postgresql.
 
 Versi Node.js:
 ```
@@ -132,6 +132,14 @@ Jalankan servernya, bisa dengan menggunakan `npm` atau `yarn` :
 npm run start or yarn start
 ```
 Lalu, anda dapat mengakses proyek ini di alamat : http://localhost:3000, untuk dokumentasi swaggernya anda dapat mengaksesnya di alamat ini : http://localhost:3000/api-docs/
+
+## Tautan & Sumber Daya
+- [Node.js](https://nodejs.org/en/download)
+- [PostgreSQL](https://www.postgresql.org/download)
+- [Mocha](https://mochajs.org)
+- [Chai](https://www.chaijs.com)
+- [Supertest](https://github.com/visionmedia/supertest)
+- 
 
 ## Diperbarui
 Berisi daftar penambahan atau perubahan yang dilakukan diluar dari source code yang dibuat saat video live streaming :
