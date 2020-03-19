@@ -1,12 +1,12 @@
 # Unit Testing Express.js with PostgreSQL | [Demo](https://unit-test-express-postgres.herokuapp.com/api-docs) &middot; ![Github CI Node.js PostgreSQL](https://github.com/MuhammadFariMadyan/unit-testing-express-postgres/workflows/Github%20CI%20Node.js%20PostgreSQL/badge.svg) [![codecov](https://codecov.io/gh/MuhammadFariMadyan/unit-testing-express-postgres/branch/development/graph/badge.svg)](https://codecov.io/gh/MuhammadFariMadyan/unit-testing-express-postgres)
 
 ## Tentang Proyek ini
-> *Ini adalah repositori sederhana sebagai contoh dari penerapan unit testing menggunakan continuous integration (CI) menggunaakan github actions dan continuous deployment (CD) di heroku yang dibuat menggunakan express.js (salah satu framework dari node.js), mocha sebagai test runnner, chai sebagai assertion library dan istanbul untuk melihat coverage testingnya serta menggunakan postgresql sebagai databasenya. Event ini terdaftar di https://www.dicoding.com/events/2988*
+> *Ini adalah repositori sederhana sebagai contoh dari penerapan unit testing menggunakan continuous integration (CI) menggunakan github actions dan continuous deployment (CD) di heroku, yang dibuat menggunakan express.js (salah satu framework dari node.js), mocha sebagai test runnner, chai sebagai assertion library dan istanbul untuk melihat coverage testingnya serta menggunakan postgresql sebagai databasenya. Event ini terdaftar di https://www.dicoding.com/events/2988*
 
 > [Read in English Version](README.en.md)
 
 ### Deskripsi :
-- Repositori ini adalah hasil akhir dari source code yang dibuat pada acara live streaming yang berjudul [Create REST API with Automated Testing using Express.js](https://www.dicoding.com/events/2988/).
+- Repositori ini adalah hasil akhir dari source code yang dibuat pada acara live streaming [Create REST API with Automated Testing using Express.js](https://www.dicoding.com/events/2988/).
 - Video live streaming dapat dilihat di [twitch.com/faritw](https://www.twitch.tv/videos/558640300), untuk daftar materi nya adalah sebagai berikut :
   - Pembukaan = di menit (00:12:13)
   - Sesi 1 - Create Rest API with Express.js secara manual = di menit (00:16:50 - 01:24:10)
@@ -27,7 +27,7 @@ Dokumentasi REST API dari proyek ini : [unit-test-express-postgres.herokuapp.com
 ![image](https://user-images.githubusercontent.com/7545546/75762344-18603c80-5d6d-11ea-9f7e-f0942b85cec4.png) 
 
 ### Fitur :
-- Hanya ada 5 endpoint yang dibuat, yang terdiri dari Browse, Read, Edit, Add, Delete (BREAD).
+- Hanya ada 6 endpoint yang dibuat, yang terdiri dari Browse, Read, Edit, Add, Delete (BREAD).
 - Hanya terdiri dari 1 tabel, yaitu tabel user.
 - Belum ada atribut level akses / role didalam tabel user ini untuk membedakan hak akses dari setiap penggunanya.
 - Hasil generate token JWT nya belum digunakan.
@@ -47,7 +47,8 @@ psql --version
 psql (PostgreSQL) 11.2
 ```
 
-## Memulainya dari terminal (cmd, powershell, git bash dan sebagainya)
+## Memulai Pengembangan
+Buka terminal (cmd, powershell, git bash dan sebagainya)
 Kloning repositori ini dengan cara :
 ```
 git clone https://github.com/MuhammadFariMadyan/unit-testing-express-postgres.git
@@ -90,7 +91,6 @@ Membuat database dan tabel dalam mode `testing` :
 npm run db:test:start
 ```
 Menjalankan test :
-
 ```
 npm run test
 ```
@@ -113,7 +113,7 @@ All files                         |   91.53 |    76.19 |   88.89 |   91.96 |
   users.js                        |     100 |      100 |     100 |     100 | 
 ----------------------------------|---------|----------|---------|---------|-------------------
 ```
-Dengan menggunakan swagger, kita dapat menguji endpoint yang telah kita buat ketika proyek nya sudah di deploy atau dengan kata lain ketika dalam mode `production`, namun anda harus mematikan komentar di baris 8 dan sebaliknya anda harus menjadikan baris 7 sebagai komentar di dalam file `app.js` dan lakukan perubahan `HOST` dengan `YOUR_HOST_APP` :
+Manfaat menggunakan swagger adalah kita dapat menguji endpoint yang telah kita buat ketika proyek nya sudah di deploy atau dengan kata lain ketika dalam mode `production`, namun anda harus mematikan komentar di baris 8 dan sebaliknya anda harus menjadikan baris 7 sebagai komentar di dalam file `app.js` dan lakukan perubahan `HOST` dengan `YOUR_HOST_APP` :
 ```
 ...
 7 // const HOST_APP = 'localhost:3000';
@@ -133,16 +133,21 @@ npm run start or yarn start
 ```
 Lalu, anda dapat mengakses proyek ini di alamat : http://localhost:3000, untuk dokumentasi swaggernya anda dapat mengaksesnya di alamat ini : http://localhost:3000/api-docs/
 
+## Versi source code asli
+Source code asli dari hasil live streaming adalah [di commit ini](https://github.com/MuhammadFariMadyan/unit-testing-express-postgres/tree/3b744c6e72bd2bc0b1a4dcee65f6be21e5329650).
+
 ## Tautan & Sumber Daya
 - [Node.js](https://nodejs.org/en/download)
 - [PostgreSQL](https://www.postgresql.org/download)
 - [Mocha](https://mochajs.org)
 - [Chai](https://www.chaijs.com)
 - [Supertest](https://github.com/visionmedia/supertest)
-- 
+- [PostgreSQL example github actions](https://github.com/actions/example-services/blob/master/.github/workflows/postgres-service.yml)
+- [Node.js example github actions](https://github.com/actions/starter-workflows/blob/master/ci/node.js.yml)
 
 ## Diperbarui
 Berisi daftar penambahan atau perubahan yang dilakukan diluar dari source code yang dibuat saat video live streaming :
 1. Penambahan codecov untuk melihat hasil coverage testingnya secara online.
 2. Memperbaiki typo penulisan "expess" di file app.js.
-3. Menambahkan pm2 untuk menjalankan server di Heroku beserta scripts command nya.
+3. Menambahkan paket `pm2` untuk menjalankan server di Heroku beserta scripts command nya.
+4. Menggunakan konfigurasi environment variable untuk production di Heroku.
