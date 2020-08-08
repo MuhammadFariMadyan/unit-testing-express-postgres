@@ -25,11 +25,11 @@ module.exports = {
         where: { email }
       })
 
-      if(!checkUser) res.status(404).json({message: "User not found"});
+      if(!checkUser) return res.status(404).json({message: "User not found"});
       
       const isPasswordTrue = checkUser.checkPassword(password, checkUser.password);
       
-      if(!isPasswordTrue) res.status(404).json({message: "Invalid login"});
+      if(!isPasswordTrue) return res.status(404).json({message: "Invalid login"});
       
       res.status(200).json({
         message: "success login",
@@ -62,7 +62,7 @@ module.exports = {
         where:{ id : idUser }
       })
 
-      if(!user) res.status(404).json({ message : "User not found"});
+      if(!user) return res.status(404).json({ message : "User not found"});
 
       res.status(200).json({
         message: "success read single user",
@@ -82,7 +82,7 @@ module.exports = {
         where:{ id : idUser}
       })
 
-      if(!user) res.status(404).json({ message: "User not found"});
+      if(!user) return res.status(404).json({ message: "User not found"});
 
       user.name =  name;
       user.email = email;
@@ -105,7 +105,7 @@ module.exports = {
         where: { id : idUser}
       })
 
-      if(!user) res.status(404).json({ message :  "User not found"});
+      if(!user) return res.status(404).json({ message :  "User not found"});
 
       await user.destroy();
 
